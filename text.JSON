@@ -1,5 +1,6 @@
 {"client":[
-    { "nom":"John", "prenom":"Doe" , "age": "31"},
+    { "nom":"doe", "prenom":"juju" , "age": "31"},
     { "nom":"urbaniak", "prenom":"nicolas" , "age": "38" },
-    { "nom":"jean", "prenom":"marcel" , "age": "98" }
+    { "nom":"clavier", "prenom":"christian" , "age": "98" },
+    { "nom":"lebanner", "prenom":"jerome" , "age": "45" }
 ]}
