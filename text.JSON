@@ -1,0 +1,5 @@
+{"client":[
+    { "nom":"John", "prenom":"Doe" , "age": "31"},
+    { "nom":"urbaniak", "prenom":"nicolas" , "age": "38" },
+    { "nom":"jean", "prenom":"marcel" , "age": "98" }
+]}

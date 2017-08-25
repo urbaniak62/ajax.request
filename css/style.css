@@ -1,0 +1,12 @@
+body{
+  margin: 0 auto;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+#listClient{
+  display: block;
+}
+#listClient{
+  border: 1px solid #a5d6a7;
+}

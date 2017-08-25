@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+  <html lang="fr">
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <meta charset="utf-8">
+      <link href="https://fonts.googleapis.com/css?family=Monda" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link type="text/css" rel="stylesheet" href="css/materialize.css">
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css">
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    </head>
+    <body class="container">
+      <header>
+        <h1>MON ESPACE CLIENT</h1>
+      </header>
+      <table class="highlight">
+          <thead class="green lighten-4 z-depth-1">
+            <tr>
+                <th>Nom</th>
+                <th>prenom</th>
+                <th>age</th>
+            </tr>
+          </thead>
+
+          <tbody id="table" class="z-depth-1">
+            <!-- <tr>
+              <td ></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr> -->
+          </tbody>
+        </table>
+        <select id="listClient" class="z-depth-1">
+
+              <option  value="nom">nom</option>
+              <option  value="prenom">prenom</option>
+              <option value="prof">profession</option>
+
+          </select>
+          <p id="demo"></p>
+
+        <button type="button" onclick="loadDoc()">click</button>
+        <!-- <p id="demo"></p> -->
+
+      <!--Import jQuery before materialize.js-->
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script type="text/javascript" src="js/modernizr-2.8.3.min.js"></script>
+      <script type="text/javascript" src="js/main.js"></script>
+    </body>
+</html>
