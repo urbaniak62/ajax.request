@@ -45,7 +45,7 @@ function loadDoc() {
       //     return a.age - b.age;
       // });
       for (var i in array.client) {
-        console.table(array.client[i]);
+        console.log(array.client[i]);
          $("#table").append("<tr class='nom'><td>" + array.client[i].nom
          + "</td><td>" + array.client[i].prenom  + "</td> " + "<td>"
          + array.client[i].age + "</td></tr>")
