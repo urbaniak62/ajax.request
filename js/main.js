@@ -5,6 +5,8 @@ function loadDoc() {
     if (this.readyState == 4 && this.status == 200) {
       var array = JSON.parse(this.responseText);
 
+      /*------------------boucle recuperation select----------*/
+
       var val=document.getElementsByTagName("option");
       // for (var i = 0; i < val.length; i++) {
       //   console.log(val[i].value);
@@ -13,8 +15,6 @@ function loadDoc() {
       //   });
       // }
 
-/*------------------boucle recuperation select----------*/
-
       for (let i = 0; i < val.length; i++) {
       val[i].addEventListener("click",function(){
          console.log(val[i].value);
@@ -22,30 +22,22 @@ function loadDoc() {
        })
      }
 
+
 /*----------------triage selon le select---------*/
 
       function trier(a,b){
-        if (a.age < b.age) {
+        var select=document.getElementById("listClient").value;
+        console.log(select);
+        if (  a[select] < b[select]) {
           return -1;
-
         }
         else {
           return 1;
         }
-        if (a.prenom < b.prenom) {
-          return -1;
-        }
-        else if (a.prenom > b.prenom) {
-          return 1;
-        }
-        if (a.nom < b.nom) {
-          return -1;
-        }
-        else if (a.nom > b.nom) {
-          return 1;
-        }
+
       }
       array.client.sort(trier);
+
 
 /*--------------affichage JSON creation tableau-----------*/
 
@@ -54,9 +46,7 @@ function loadDoc() {
          $("#table").append("<tr class='nom'><td>" + array.client[i].nom
          + "</td><td>" + array.client[i].prenom  + "</td> " + "<td>"
          + array.client[i].age + "</td></tr>")
-
       }
-
 
     }
   };
