@@ -4,7 +4,7 @@ function loadDoc() {
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       var array = JSON.parse(this.responseText);
-
+      $("#table").text(" ");
       /*------------------boucle recuperation select----------*/
 
       var val=document.getElementsByTagName("option");
