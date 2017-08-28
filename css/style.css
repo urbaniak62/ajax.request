@@ -1,12 +1,12 @@
 body{
-  margin: 0 auto;
-  padding: 0;
+
   height: 100%;
   width: 100%;
 }
-#listClient{
-  display: block;
+h1{
+margin-bottom:10%;
 }
 #listClient{
+  display: block;
   border: 1px solid #a5d6a7;
 }

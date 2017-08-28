@@ -4,7 +4,7 @@ function loadDoc() {
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       var array = JSON.parse(this.responseText);
-      // triage par age-----------
+
       var val=document.getElementsByTagName("option");
       // for (var i = 0; i < val.length; i++) {
       //   console.log(val[i].value);
@@ -13,37 +13,42 @@ function loadDoc() {
       //   });
       // }
 
+/*------------------boucle recuperation select----------*/
 
       for (let i = 0; i < val.length; i++) {
-       val[i].addEventListener("click",function(){
+      val[i].addEventListener("click",function(){
          console.log(val[i].value);
-       })
-      }
 
+       })
+     }
+
+/*----------------triage selon le select---------*/
 
       function trier(a,b){
-        // if (a.age < b.age) {
-        //   return -1;
-        //
-        // }
+        if (a.age < b.age) {
+          return -1;
+
+        }
+        else {
+          return 1;
+        }
         if (a.prenom < b.prenom) {
           return -1;
         }
         else if (a.prenom > b.prenom) {
           return 1;
         }
-        // if (a.nom < b.nom) {
-        //   return -1;
-        // }
-        // else if (a.nom > b.nom) {
-        //   return 1;
-        // }
+        if (a.nom < b.nom) {
+          return -1;
+        }
+        else if (a.nom > b.nom) {
+          return 1;
+        }
       }
       array.client.sort(trier);
 
-      // array.client.sort(function(a,b){
-      //     return a.age - b.age;
-      // });
+/*--------------affichage JSON creation tableau-----------*/
+
       for (var i in array.client) {
         console.log(array.client[i]);
          $("#table").append("<tr class='nom'><td>" + array.client[i].nom
